@@ -7,6 +7,9 @@
 
         <!-- Email Address -->
         <div>
+            <h1 class="text-4xl mb-3 font-bold text-center">Accede</h1>
+        </div>
+        <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
