@@ -102,9 +102,9 @@
 
         <div class="flex flex-row flex-wrap flex-grow mt-2">
 
-            <div class="w-full md:w-7/12 p-3">
+            <div class="w-full md:w-1/2 p-3">
                 <!--Graph Card-->
-                <div class=" border border-gray-800 rounded shadow  h-full">
+                <div class=" border border-gray-800 rounded shadow">
                     <div class="border-b border-gray-800 p-3">
                         <h5 class="font-bold uppercase text-gray-600">Graph</h5>
                     </div>
@@ -144,9 +144,9 @@
                 <!--/Graph Card-->
             </div>
 
-            <div class="w-full md:w-5/12 h-full p-3">
+            <div class="w-full md:w-1/2 p-3">
                 <!--Graph Card-->
-                <div class=" border border-gray-800 rounded shadow  h-full">
+                <div class=" border border-gray-800 rounded shadow">
                     <div class="border-b border-gray-800 p-3">
                         <h5 class="font-bold uppercase text-gray-600">Graph</h5>
                     </div>

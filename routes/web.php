@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use Aws\IotDataPlane\IotDataPlaneClient;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,29 +16,5 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-use Aws\Iot\IotClient; // ¡Cambia la clase!
 
-Route::get('/test-iot', function () {
-    try {
-        $client = new IotClient([ // Nota: IotClient, no IotDataPlaneClient
-            'region' => env('AWS_DEFAULT_REGION'),
-            'version' => 'latest',
-            'credentials' => [
-                'key' => env('AWS_ACCESS_KEY_ID'),
-                'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            ],
-        ]);
-
-        $result = $client->listThings();
-        return response()->json([
-            'status' => 'success',
-            'things' => $result->get('things')
-        ]);
-    } catch (\Exception $e) {
-        return response()->json([
-            'status' => 'error',
-            'message' => $e->getMessage()
-        ], 500);
-    }
-});
 require __DIR__.'/auth.php';
