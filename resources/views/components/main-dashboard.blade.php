@@ -102,15 +102,82 @@
 
         <div class="flex flex-row flex-wrap flex-grow mt-2">
 
-            <div class="w-full md:w-1/2 p-3">
+            <div class="w-full md:w-7/12 p-3">
                 <!--Graph Card-->
+<<<<<<< HEAD
                 <!--poner grafico-->
+=======
+                <div class=" border border-gray-800 rounded shadow  h-full">
+                    <div class="border-b border-gray-800 p-3">
+                        <h5 class="font-bold uppercase text-gray-600">Graph</h5>
+                    </div>
+                    <div class="p-5">
+                        <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
+                        <script>
+                            new Chart(document.getElementById("chartjs-7"), {
+                                "type": "bar",
+                                "data": {
+                                    "labels": ["January", "February", "March", "April"],
+                                    "datasets": [{
+                                        "label": "Page Impressions",
+                                        "data": [10, 20, 30, 40],
+                                        "borderColor": "rgb(255, 99, 132)",
+                                        "backgroundColor": "rgba(255, 99, 132, 0.2)"
+                                    }, {
+                                        "label": "Adsense Clicks",
+                                        "data": [5, 15, 10, 30],
+                                        "type": "line",
+                                        "fill": false,
+                                        "borderColor": "rgb(54, 162, 235)"
+                                    }]
+                                },
+                                "options": {
+                                    "scales": {
+                                        "yAxes": [{
+                                            "ticks": {
+                                                "beginAtZero": true
+                                            }
+                                        }]
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+>>>>>>> d2f98bf3dab7cd4a4223a95d594f14aa1c5ce18c
                 <!--/Graph Card-->
             </div>
 
-            <div class="w-full md:w-1/2 p-3">
+            <div class="w-full md:w-5/12 h-full p-3">
                 <!--Graph Card-->
+<<<<<<< HEAD
                 <!--poner grafico-->
+=======
+                <div class=" border border-gray-800 rounded shadow  h-full">
+                    <div class="border-b border-gray-800 p-3">
+                        <h5 class="font-bold uppercase text-gray-600">Graph</h5>
+                    </div>
+                    <div class="p-5">
+                        <canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined"></canvas>
+                        <script>
+                            new Chart(document.getElementById("chartjs-0"), {
+                                "type": "line",
+                                "data": {
+                                    "labels": ["January", "February", "March", "April", "May", "June", "July"],
+                                    "datasets": [{
+                                        "label": "Views",
+                                        "data": [65, 59, 80, 81, 56, 55, 40],
+                                        "fill": false,
+                                        "borderColor": "rgb(75, 192, 192)",
+                                        "lineTension": 0.1
+                                    }]
+                                },
+                                "options": {}
+                            });
+                        </script>
+                    </div>
+                </div>
+>>>>>>> d2f98bf3dab7cd4a4223a95d594f14aa1c5ce18c
                 <!--/Graph Card-->
             </div>
 
