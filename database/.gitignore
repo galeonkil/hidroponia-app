@@ -1,1 +1,37 @@
-*.sqlite*
+### Laravel - General ###
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Entorno de desarrollo
+.env
+Homestead.yaml
+Homestead.json
+/.vagrant
+
+# PHPUnit
+.phpunit.result.cache
+
+# Laravel específico
+bootstrap/compiled.php
+
+# Storage y certificados
+storage/*.key
+storage/**/*.key
+storage/**/*.pem
+storage/**/*.crt
+
+# Opcional: ignorar todo lo generado en storage pero mantener estructura
+/storage/app/*
+/storage/framework/*
+/storage/logs/*
+!/storage/app/.gitignore
+!/storage/framework/.gitignore
+!/storage/logs/.gitignore
+
+# Ignorar enlaces simbólicos y hot reload
+public/storage
+public/hot
+public_html/storage
+public_html/hot
