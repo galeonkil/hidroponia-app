@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 use Aws\IotDataPlane\IotDataPlaneClient;
 
 Route::get('/', function () {
@@ -42,4 +43,11 @@ Route::get('/test-iot', function () {
         ], 500);
     }
 });
+
+
+
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
 require __DIR__.'/auth.php';
